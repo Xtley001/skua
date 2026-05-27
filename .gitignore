@@ -1,0 +1,33 @@
+# ── Secrets — NEVER commit ────────────────────────────────────
+.env
+*.key
+*.pem
+*.p12
+
+# ── Rust ─────────────────────────────────────────────────────
+bot/target/
+**/*.rs.bk
+
+# ── Foundry ──────────────────────────────────────────────────
+contracts/out/
+contracts/cache/
+contracts/.deps/
+contracts/broadcast/*/31337/  # local anvil runs only
+
+# Keep mainnet + testnet broadcast logs for audit trail
+# contracts/broadcast/*/999/  ← DO NOT gitignore mainnet deployments
+
+# ── Dashboard ────────────────────────────────────────────────
+dashboard/node_modules/
+dashboard/dist/
+dashboard/.env.local
+
+# ── OS ────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Editor ────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo

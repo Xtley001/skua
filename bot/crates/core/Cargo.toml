@@ -1,0 +1,15 @@
+[package]
+name    = "skua-core"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+alloy.workspace = true
+anyhow.workspace = true
+thiserror.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+tokio.workspace = true
+tracing.workspace = true
+parking_lot.workspace = true
+once_cell.workspace = true

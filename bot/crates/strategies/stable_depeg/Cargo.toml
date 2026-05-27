@@ -1,0 +1,16 @@
+[package]
+name    = "skua-strategy-stable-depeg"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+skua-core       = { path = "../../core" }
+skua-chain      = { path = "../../chain" }
+skua-simulation = { path = "../../simulation" }
+skua-scanner    = { path = "../../scanner" }
+skua-executor   = { path = "../../executor" }
+skua-hypercore  = { path = "../../hypercore" }
+alloy.workspace  = true
+anyhow.workspace = true
+tokio.workspace  = true
+tracing.workspace = true

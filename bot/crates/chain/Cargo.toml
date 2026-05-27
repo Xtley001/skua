@@ -1,0 +1,16 @@
+[package]
+name    = "skua-chain"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+skua-core = { path = "../core" }
+alloy.workspace = true
+anyhow.workspace = true
+tokio.workspace = true
+tokio-stream.workspace = true
+futures.workspace = true
+tracing.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+rand.workspace = true

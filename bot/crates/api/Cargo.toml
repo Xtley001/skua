@@ -1,0 +1,17 @@
+[package]
+name    = "skua-api"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+skua-core     = { path = "../core" }
+alloy.workspace       = true
+anyhow.workspace      = true
+tokio.workspace       = true
+tracing.workspace     = true
+serde.workspace       = true
+serde_json.workspace  = true
+axum          = { version = "0.7", features = ["json"] }
+prometheus    = "0.13"
+reqwest       = { version = "0.12", features = ["json"] }
+tower-http    = { version = "0.5", features = ["cors"] }

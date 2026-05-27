@@ -1,0 +1,38 @@
+[profile.default]
+src              = "src"
+out              = "out"
+libs             = ["lib"]
+solc             = "0.8.24"
+evm_version      = "cancun"          # HyperEVM runs Cancun — MUST match
+optimizer        = true
+optimizer_runs   = 1_000_000         # Optimise for execution (many calls per deploy)
+gas_reports      = ["*"]             # Gas report on every test run
+via_ir           = false             # Keep false unless gas savings justify it
+
+[profile.default.fuzz]
+runs             = 10_000            # High fuzz — find edge cases before mainnet
+max_test_rejects = 65_536
+
+[profile.default.invariant]
+runs             = 1_000
+depth            = 15
+
+[profile.ci]
+# Used in CI — faster fuzz for quick feedback
+inherits         = "default"
+
+[profile.ci.fuzz]
+runs             = 256
+
+[rpc_endpoints]
+hyperevm_testnet = "${SKUA_TESTNET_RPC}"
+hyperevm_mainnet = "${SKUA_RPC_HTTP_URL}"
+
+[etherscan]
+# HyperEVM explorer (update once publicly available)
+hyperevm = { key = "${HYPEREVM_EXPLORER_KEY}", url = "${HYPEREVM_EXPLORER_URL}" }
+
+[fmt]
+line_length      = 100
+tab_width        = 4
+bracket_spacing  = true

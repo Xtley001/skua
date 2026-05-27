@@ -1,0 +1,15 @@
+[package]
+name    = "skua-simulation"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+skua-core  = { path = "../core" }
+skua-chain = { path = "../chain" }
+alloy.workspace  = true
+anyhow.workspace = true
+tokio.workspace  = true
+tracing.workspace = true
+
+[dev-dependencies]
+approx = "0.5"

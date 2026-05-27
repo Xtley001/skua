@@ -1,0 +1,13 @@
+[package]
+name    = "skua-scanner"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+skua-core       = { path = "../core" }
+skua-chain      = { path = "../chain" }
+skua-simulation = { path = "../simulation" }
+alloy.workspace     = true
+anyhow.workspace    = true
+tokio.workspace     = true
+tracing.workspace   = true
